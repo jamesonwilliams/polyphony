@@ -18,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      {/* https://stackoverflow.com/a/76480526/695787 */}
+      <body className={inter.className} suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   );
 }
