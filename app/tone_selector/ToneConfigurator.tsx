@@ -10,7 +10,7 @@ export default function ToneConfigurator({
   onTonesChanged: (tones: string[]) => void;
 }) {
   return (
-    <table>
+    <table className='min-w-full'>
       <tbody>
         {tones.map((tone) => (
           <ConfiguredToneRow

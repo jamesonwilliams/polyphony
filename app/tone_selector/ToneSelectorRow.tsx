@@ -21,29 +21,30 @@ export default function ToneSelectorRow({
     }
   };
 
-  let addButtonClasses: string = 'add-button';
+  let addButtonClasses: string = 'add-button min-w-full';
   if (tones.includes(newTone)) {
     addButtonClasses += ' disabled';
   }
 
   return (
-    <tr key='new'>
-      <td>
-        <NoteSelector note={note} noteSelected={(note) => setNote(note)} />
-      </td>
+    <>
+      <tr key='new'>
+        <td>
+          <NoteSelector note={note} noteSelected={(note) => setNote(note)} />
+        </td>
 
-      <td>
-        <OctaveSelector
-          octave={octave}
-          octaveSelected={(octave) => setOctave(octave)}
-        />
-      </td>
-
-      <td>
-        <button className={addButtonClasses} onClick={addNewTone}>
-          Add
-        </button>
-      </td>
-    </tr>
+        <td>
+          <OctaveSelector
+            octave={octave}
+            octaveSelected={(octave) => setOctave(octave)}
+          />
+        </td>
+        <td>
+          <button className={addButtonClasses} onClick={addNewTone}>
+            Add
+          </button>
+        </td>
+      </tr>
+    </>
   );
 }

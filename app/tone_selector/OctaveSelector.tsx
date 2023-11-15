@@ -10,6 +10,7 @@ export default function OctaveSelector({
 }) {
   return (
     <select
+      className='w-full'
       name='octave'
       id='octave'
       value={octave}

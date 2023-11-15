@@ -9,6 +9,7 @@ export default function NoteSelector({
 }) {
   return (
     <select
+      className='w-full'
       name='note'
       id='note'
       value={note}
