@@ -10,12 +10,16 @@ export default function Footer({}: {}) {
       url: 'https://github.com/jamesonwilliams/polyphony/tree/main#polyphony',
     },
     {
-      name: 'Deployed',
+      name: 'Live',
       url: 'https://polyphony.vercel.app/',
     },
     {
       name: 'Dev',
       url: 'http://localhost:3000/',
+    },
+    {
+      name: 'Dashboard',
+      url: 'https://vercel.com/jamesonwilliams/polyphony',
     },
   ];
 
