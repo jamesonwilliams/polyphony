@@ -34,8 +34,13 @@ button {
   @apply mt-1 min-h-full min-w-full rounded bg-blue-500 px-4 py-2 text-white;
 }
 
+@media (prefers-color-scheme: dark) {
+  select {
+    @apply bg-gray-300 text-gray-700;
+  }
+}
+
 select {
-  color: rgb(var(--background-end-rgb));
   @apply mt-1 min-h-full min-w-full rounded border px-4 py-2;
 }
 
