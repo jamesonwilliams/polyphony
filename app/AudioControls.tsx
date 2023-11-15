@@ -1,14 +1,12 @@
-interface AudioControlsProps {
-  isMuted: boolean;
-  setMuted: (muted: boolean) => void;
-  clearAll: () => void;
-}
-
-const PlayerControls: React.FC<AudioControlsProps> = ({
+export default function PlayerControls({
   isMuted,
   setMuted,
   clearAll,
-}) => {
+}: {
+  isMuted: boolean;
+  setMuted: (muted: boolean) => void;
+  clearAll: () => void;
+}) {
   return (
     <>
       <button onClick={() => setMuted(!isMuted)}>
@@ -18,6 +16,4 @@ const PlayerControls: React.FC<AudioControlsProps> = ({
       <button onClick={clearAll}>Clear all</button>
     </>
   );
-};
-
-export default PlayerControls;
+}

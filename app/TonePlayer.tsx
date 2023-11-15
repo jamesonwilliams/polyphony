@@ -1,12 +1,13 @@
 import { useEffect, useState, useRef } from 'react';
 import { PolySynth } from 'tone';
 
-interface TonePlayerProps {
+export default function TonePlayer({
+  tones,
+  muted,
+}: {
   tones: string[];
   muted: boolean;
-}
-
-const TonePlayer: React.FC<TonePlayerProps> = ({ tones, muted }) => {
+}) {
   const [lastPlaying, setLastPlaying] = useState<string[]>([]);
   const synthRef = useRef<PolySynth | null>(null);
 
@@ -43,6 +44,4 @@ const TonePlayer: React.FC<TonePlayerProps> = ({ tones, muted }) => {
   }, [tones, muted, lastPlaying]);
 
   return <></>;
-};
-
-export default TonePlayer;
+}

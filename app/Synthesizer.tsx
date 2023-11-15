@@ -2,10 +2,10 @@
 
 import TonePlayer from './TonePlayer';
 import { useState } from 'react';
-import ToneConfigurator from './ToneConfigurator';
+import ToneConfigurator from './tone_selector/ToneConfigurator';
 import PlayerControls from './AudioControls';
 
-const Synthesizer = () => {
+export default function Synthesizer() {
   const [tones, setTones] = useState<string[]>([]);
   const [isMuted, setIsMuted] = useState<boolean>(true);
 
@@ -21,6 +21,4 @@ const Synthesizer = () => {
       <TonePlayer tones={tones} muted={isMuted} />
     </div>
   );
-};
-
-export default Synthesizer;
+}

@@ -30,13 +30,18 @@ body {
   @apply mb-9 text-center font-mono text-4xl font-bold;
 }
 
-input {
+input,
+select {
   color: rgb(var(--background-start-rgb));
   @apply m-1 rounded border px-2 py-1;
 }
 
 button {
   @apply m-1 w-32 rounded bg-blue-500 px-4 py-2 text-white;
+}
+
+select {
+  @apply w-32;
 }
 
 .add-button {
