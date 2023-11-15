@@ -8,7 +8,7 @@ import Footer from './Footer';
 
 export default function Synthesizer() {
   const [tones, setTones] = useState<string[]>([]);
-  const [isMuted, setIsMuted] = useState<boolean>(true);
+  const [isMuted, setIsMuted] = useState<boolean>(false);
 
   return (
     <div>
