@@ -4,6 +4,7 @@ import TonePlayer from './TonePlayer';
 import { useState } from 'react';
 import ToneConfigurator from './tone_selector/ToneConfigurator';
 import PlayerControls from './AudioControls';
+import Footer from './Footer';
 
 export default function Synthesizer() {
   const [tones, setTones] = useState<string[]>([]);
@@ -19,6 +20,7 @@ export default function Synthesizer() {
       />
       <ToneConfigurator tones={tones} onTonesChanged={setTones} />
       <TonePlayer tones={tones} muted={isMuted} />
+      <Footer />
     </div>
   );
 }
