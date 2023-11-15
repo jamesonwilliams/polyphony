@@ -25,3 +25,24 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.title {
+  @apply mb-9 text-center font-mono text-4xl font-bold;
+}
+
+input {
+  color: rgb(var(--background-start-rgb));
+  @apply m-1 rounded border px-2 py-1;
+}
+
+button {
+  @apply m-1 w-32 rounded bg-blue-500 px-4 py-2 text-white;
+}
+
+.add-button {
+  @apply bg-green-500 text-white;
+}
+
+.delete-button {
+  @apply bg-red-500 text-white;
+}

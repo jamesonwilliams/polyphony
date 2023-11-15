@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Tone, { PolySynth } from 'tone';
+import { PolySynth } from 'tone';
 
 interface TonePlayerProps {
   tones: string[];
